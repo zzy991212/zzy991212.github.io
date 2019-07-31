@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 随笔 | ZZY&#39;s Blog</title>
+  <title>HDU 6609 Find the answer（2019HDU多校赛第三场1007） | ZZY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="而我想我属于一个拥有你的未来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZZY&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/随笔/index.html">
+  <meta name="description" content="题目传送门 Time Limit: 4000MS Memory Limit: 64MB DescriptionGiven a sequence of n integers called W and an integer m. For each i (1 &amp;lt;= i &amp;lt;= n), you can choose some elements $W_k$ (1 &amp;lt;= k &amp;lt; i),">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HDU 6609 Find the answer（2019HDU多校赛第三场1007）">
+<meta property="og:url" content="http://yoursite.com/2019/07/29/Find the answer/index.html">
 <meta property="og:site_name" content="ZZY&#39;s Blog">
-<meta property="og:description" content="而我想我属于一个拥有你的未来">
+<meta property="og:description" content="题目传送门 Time Limit: 4000MS Memory Limit: 64MB DescriptionGiven a sequence of n integers called W and an integer m. For each i (1 &amp;lt;= i &amp;lt;= n), you can choose some elements $W_k$ (1 &amp;lt;= k &amp;lt; i),">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-31T15:47:11.483Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZZY&#39;s Blog">
-<meta name="twitter:description" content="而我想我属于一个拥有你的未来">
+<meta name="twitter:title" content="HDU 6609 Find the answer（2019HDU多校赛第三场1007）">
+<meta name="twitter:description" content="题目传送门 Time Limit: 4000MS Memory Limit: 64MB DescriptionGiven a sequence of n integers called W and an integer m. For each i (1 &amp;lt;= i &amp;lt;= n), you can choose some elements $W_k$ (1 &amp;lt;= k &amp;lt; i),">
   
     <link rel="alternative" href="/atom.xml" title="ZZY&#39;s Blog" type="application/atom+xml">
   
@@ -153,60 +155,170 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Find the answer" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/20190725-New-Start/" class="archive-article-date">
-  	<time datetime="2019-07-25T05:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/20190725-New-Start/">20190725 New Start</a>
+    <h1 class="article-title" itemprop="name">
+      HDU 6609 Find the answer（2019HDU多校赛第三场1007）
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/07/29/Find the answer/" class="archive-article-date">
+  	<time datetime="2019-07-29T13:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-29</time>
+</a>
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6609" target="_blank" rel="noopener">题目传送门</a></p>
+<p>Time Limit: 4000MS Memory Limit: 64MB</p>
+<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Given a sequence of n integers called W and an integer m. For each i (1 &lt;= i &lt;= n), you can choose some elements $W_k$ (1 &lt;= k &lt; i), and change them to zero to make $\sum_{j=1}^i$$W_j$&lt;=m. So what’s the minimum number of chosen elements to meet the requirements above?</p>
+ <a id="more"></a>
+
+<h3 id="Standard-Input"><a href="#Standard-Input" class="headerlink" title="Standard Input"></a>Standard Input</h3><p>The first line contains an integer Q — the number of test cases.<br>For each test case:<br>The first line contains two integers n and m — n represents the number of elements in sequence W and m is as described above.<br>The second line contains n integers, which means the sequence W.</p>
+<p>1 &lt;= Q &lt;= 15  </p>
+<p>1 &lt;= n &lt;= 2*$10^5$  </p>
+<p>1 &lt;= m &lt;= $10^9$  </p>
+<p>For each i, 1 &lt;= $W_i$ &lt;= m</p>
+<h3 id="Standard-Output"><a href="#Standard-Output" class="headerlink" title="Standard Output"></a>Standard Output</h3><p>For each test case, you should output n integers in one line: i-th integer means the minimum number of chosen elements $W_k$ (1 &lt;= k &lt; i), and change them to zero to make $\sum_{j=1}^i$$W_j$&lt;=m.</p>
+<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><p>2  </p>
+<p>7 15  </p>
+<p>1 2 3 4 5 6 7  </p>
+<p>5 100  </p>
+<p>80 40 40 40 60</p>
+<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><p>0 0 0 0 0 2 3  </p>
+<p>0 1 1 2 3</p>
+<h3 id="Thought："><a href="#Thought：" class="headerlink" title="Thought："></a>Thought：</h3><p><strong>二分答案+树状数组</strong></p>
+<p>要使删的数尽可能少，就要删尽可能大的数，即加更多小的数。</p>
+<p>开始时先记录下数组的原始坐标，然后从小往大排序，用id[i]数组记录初始数列的第i个数排在第几位。每循环一次，就把这个数放进排好序后的位置的树状数组里，同时更新另一个树状数组（表示某个位置是否放入了数），每次二分答案求一下第一个树状数组的前缀和，使其满足题意；再利用第二个树状数组求出这段前缀和数的个数后就能计算出答案了。</p>
+<p>代码如下：</p>
+<h3 id="Code："><a href="#Code：" class="headerlink" title="Code："></a>Code：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> lowbit(x) x&amp;(-x)</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn = <span class="number">2</span>*<span class="number">1e5</span>+<span class="number">100</span>;</span><br><span class="line">LL id[maxn],num[maxn];</span><br><span class="line">LL s[maxn],no[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> pos,val;</span><br><span class="line">&#125;a[maxn];</span><br><span class="line"><span class="keyword">int</span> T,n,m;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> LL <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    LL x=<span class="number">0</span>,f=<span class="number">1</span>; <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span> (ch&lt;<span class="string">'0'</span> || ch&gt;<span class="string">'9'</span>) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=<span class="number">-1</span>; ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span> (ch&gt;=<span class="string">'0'</span> &amp;&amp; ch&lt;=<span class="string">'9'</span>) &#123;x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>; ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(node x,node y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x.val==y.val) <span class="keyword">return</span> x.pos&lt;y.pos;</span><br><span class="line">    <span class="keyword">return</span> x.val&lt;y.val;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">LL <span class="title">sum</span><span class="params">(LL *p,<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    LL su=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (;x&gt;<span class="number">0</span>;x-=lowbit(x)) su+=p[x];</span><br><span class="line">    <span class="keyword">return</span> su;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(LL* p,<span class="keyword">int</span> x,LL num)</span></span>&#123; </span><br><span class="line">    <span class="keyword">for</span> (;x&lt;n;x+=lowbit(x)) p[x]+=num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    T=read();</span><br><span class="line">    <span class="keyword">while</span> (T--)&#123;</span><br><span class="line">        n=read();m=read();</span><br><span class="line">        <span class="built_in">memset</span>(s,<span class="number">0</span>,<span class="keyword">sizeof</span> s);</span><br><span class="line">        <span class="built_in">memset</span>(no,<span class="number">0</span>,<span class="keyword">sizeof</span> no);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            num[i]=read();</span><br><span class="line">            a[i].val=num[i];</span><br><span class="line">            a[i].pos=i;</span><br><span class="line">        &#125;</span><br><span class="line">        sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n,cmp);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) id[a[i].pos]=i;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">            <span class="keyword">int</span> now=m-num[i];</span><br><span class="line">            <span class="keyword">int</span> l=<span class="number">0</span>,r=n,pl;</span><br><span class="line">            <span class="keyword">while</span> (l&lt;=r)&#123;</span><br><span class="line">                <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">                <span class="keyword">long</span> <span class="keyword">long</span> sx=sum(s,mid); </span><br><span class="line">                <span class="keyword">if</span> (sx&lt;=now)&#123;</span><br><span class="line">                    l=mid+<span class="number">1</span>;pl=mid; </span><br><span class="line">                &#125;<span class="keyword">else</span> r=mid<span class="number">-1</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> cnt=sum(no,pl);</span><br><span class="line">            <span class="built_in">cout</span>&lt;&lt;i-cnt<span class="number">-1</span>&lt;&lt;<span class="string">" "</span>;</span><br><span class="line">            add(no,id[i],<span class="number">1</span>);</span><br><span class="line">            add(s,id[i],num[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">cout</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/29/Find the answer/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/07/27/线性基/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">线性基</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -246,9 +358,9 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,

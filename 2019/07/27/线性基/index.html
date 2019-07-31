@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: 随笔 | ZZY&#39;s Blog</title>
+  <title>线性基 | ZZY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="而我想我属于一个拥有你的未来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZZY&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/随笔/index.html">
+  <meta name="description" content="鸣谢Yveh博主的博客！  一、定义设数集T的值域范围为[1,2n-1] , T的线性基是T的一个子集A={a1,a2,a3,…,an}。  A中元素互相xor所形成的异或集合，等价于原数集T的元素互相xor形成的异或集合。">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="线性基">
+<meta property="og:url" content="http://yoursite.com/2019/07/27/线性基/index.html">
 <meta property="og:site_name" content="ZZY&#39;s Blog">
-<meta property="og:description" content="而我想我属于一个拥有你的未来">
+<meta property="og:description" content="鸣谢Yveh博主的博客！  一、定义设数集T的值域范围为[1,2n-1] , T的线性基是T的一个子集A={a1,a2,a3,…,an}。  A中元素互相xor所形成的异或集合，等价于原数集T的元素互相xor形成的异或集合。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-07-31T15:34:43.353Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZZY&#39;s Blog">
-<meta name="twitter:description" content="而我想我属于一个拥有你的未来">
+<meta name="twitter:title" content="线性基">
+<meta name="twitter:description" content="鸣谢Yveh博主的博客！  一、定义设数集T的值域范围为[1,2n-1] , T的线性基是T的一个子集A={a1,a2,a3,…,an}。  A中元素互相xor所形成的异或集合，等价于原数集T的元素互相xor形成的异或集合。">
   
     <link rel="alternative" href="/atom.xml" title="ZZY&#39;s Blog" type="application/atom+xml">
   
@@ -153,60 +155,209 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-线性基" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/25/20190725-New-Start/" class="archive-article-date">
-  	<time datetime="2019-07-25T05:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/25/20190725-New-Start/">20190725 New Start</a>
+    <h1 class="article-title" itemprop="name">
+      线性基
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/07/27/线性基/" class="archive-article-date">
+  	<time datetime="2019-07-27T09:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-27</time>
+</a>
+        
+      </header>
+    
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>鸣谢<a href="https://blog.csdn.net/qaq__qaq/article/details/53812883" target="_blank" rel="noopener">Yveh博主的博客</a>！</p>
+</blockquote>
+<h3 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h3><p>设数集T的值域范围为[1,2<sup>n</sup>-1] ,</p>
+<p>T的线性基是T的一个子集A={a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,…,a<sub>n</sub>}。 </p>
+<p>A中元素互相xor所形成的异或集合，等价于原数集T的元素互相xor形成的异或集合。 </p>
+ <a id="more"></a>
+
+<p>（可以理解为将原数集进行了压缩）</p>
+<p>例：A={1,2,4}可以是数集T=[1,7]的一个线性基，因为A中数的异或和可以表示T中任意的一个数。</p>
+<p>我们如果把上例的十进制数拆成二进制数就能知道，这与线代中“一组线性无关的向量可张起一个向量空间”是一个道理。<br>$$<br>A=\begin{bmatrix}<br>1 &amp; 0 &amp; 0\<br>0 &amp; 1 &amp; 0\<br>0 &amp; 0 &amp; 1<br>\end{bmatrix}<br>$$</p>
+<p>当然，如果选取A={1,3,5}亦可……此时：<br>$$<br>A=\begin{bmatrix}<br>   1 &amp; 0 &amp; 1\<br>   0 &amp; 1 &amp; 1\<br>   0 &amp; 0 &amp; 1<br>  \end{bmatrix}<br>$$<br>（A经过初等行变换获得的最简的基底就是<strong>A={a<sub>i</sub>|a<sub>i</sub>=2<sup>i</sup>,i=0,1,2……}</strong>这组基底）</p>
+<h3 id="二、一些性质"><a href="#二、一些性质" class="headerlink" title="二、一些性质"></a>二、一些性质</h3><p><strong>1. 线性基的异或集合中不存在0。</strong> </p>
+<ul>
+<li>就是不能从线性基内取出一些数，使得它们的异或和为0（十分显然，对吧）</li>
+</ul>
+<p><strong>2. 线性基的异或集合中每个元素的异或方案唯一，其实这个跟性质1是等价的。</strong></p>
+<ul>
+<li>大概就是说一个数只能由某几个数的异或和得到，并且找不到第二种异或和等于这个数的方案</li>
+</ul>
+<p>*<em>3.线性基二进制最高位互不相同。 *</em></p>
+<ul>
+<li>只有a<sub>i</sub>位最高位为1，其它的a向量最高位都不能是第i位（稍后的插入元素会有代码过程）</li>
+</ul>
+<p><strong>4. 如果线性基是满的，它的异或集合为[1,2<sup>n</sup>−1]。</strong> </p>
+<ul>
+<li>很显然</li>
+</ul>
+<p><strong>5. 线性基中元素互相异或，异或集合不变。</strong></p>
+<ul>
+<li>显然++</li>
+</ul>
+<h3 id="三、插入元素到线性基中"><a href="#三、插入元素到线性基中" class="headerlink" title="三、插入元素到线性基中"></a>三、插入元素到线性基中</h3><ol>
+<li><p>如果向线性基中插入数x，从高位到低位扫描它为1的二进制位。 </p>
+</li>
+<li><p>扫描到第i时，如果ai不存在，就令ai=x，否则x=x⊗ai。</p>
+</li>
+<li><p>x的结局是，要么被扔进线性基，要么经过一系列操作过后，变成了0。</p>
+</li>
+</ol>
+<p>（插入元素n的复杂度为O(logn)）</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">insert</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> val)</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">        <span class="keyword">if</span> (val&amp;(<span class="number">1L</span>L&lt;&lt;i))&#123;<span class="comment">//扫描为1的二进制位</span></span><br><span class="line">            <span class="keyword">if</span> (!a[i])&#123;<span class="comment">//如果不存在就把val放进线性基中</span></span><br><span class="line">                a[i]=val;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            val^=a[i];<span class="comment">//存在的话就异或一下接着找</span></span><br><span class="line">        &#125;</span><br><span class="line">    <span class="keyword">return</span> val&gt;<span class="number">0</span>;<span class="comment">//返回1即插入成功</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、暴力合并两个线性基"><a href="#四、暴力合并两个线性基" class="headerlink" title="四、暴力合并两个线性基"></a>四、暴力合并两个线性基</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">L_B <span class="title">merge</span><span class="params">(<span class="keyword">const</span> L_B &amp;n1,<span class="keyword">const</span> L_B &amp;n2)</span></span>&#123;</span><br><span class="line">    L_B ret=n1;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">60</span>;i++)</span><br><span class="line">        <span class="keyword">if</span> (n2.d[i])</span><br><span class="line">            ret.insert(n2.d[i]);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="五、一些具体应用"><a href="#五、一些具体应用" class="headerlink" title="五、一些具体应用"></a>五、一些具体应用</h3><h4 id="1-存在性问题"><a href="#1-存在性问题" class="headerlink" title="1.存在性问题"></a>1.存在性问题</h4><p>如果要查询x是否存于异或集合中，从高位到低位扫描x的为1的二进制位，且扫描到第i位的时候x=x⊗ai，如果在查询中途x变为了0，那么表示x存于线性基的异或集合中。</p>
+<h4 id="2-求异或集合中的最大值"><a href="#2-求异或集合中的最大值" class="headerlink" title="2.求异或集合中的最大值"></a>2.求异或集合中的最大值</h4><p>很简单，从高位到低位扫描线性基，如果异或后可以使得答案变大，就异或到答案中去。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">query_max</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ret=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">        <span class="keyword">if</span> ((ret^d[i])&gt;ret)</span><br><span class="line">            ret^=d[i];</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-求异或集合中的最小值"><a href="#3-求异或集合中的最小值" class="headerlink" title="3.求异或集合中的最小值"></a>3.求异或集合中的最小值</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">query_min</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">60</span>;i++)</span><br><span class="line">        <span class="keyword">if</span> (d[i])</span><br><span class="line">            <span class="keyword">return</span> d[i];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>……</p>
+<h3 id="六、模板（再次感谢Yveh博主！）"><a href="#六、模板（再次感谢Yveh博主！）" class="headerlink" title="六、模板（再次感谢Yveh博主！）"></a>六、模板（再次感谢Yveh博主！）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">L_B</span>&#123;</span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> d[<span class="number">61</span>],p[<span class="number">61</span>];</span><br><span class="line">    <span class="keyword">int</span> cnt;</span><br><span class="line">    L_B()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memset</span>(d,<span class="number">0</span>,<span class="keyword">sizeof</span>(d));</span><br><span class="line">        <span class="built_in">memset</span>(p,<span class="number">0</span>,<span class="keyword">sizeof</span>(p));</span><br><span class="line">        cnt=<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">bool</span> <span class="title">insert</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> val)</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">            <span class="keyword">if</span> (val&amp;(<span class="number">1L</span>L&lt;&lt;i))</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="keyword">if</span> (!d[i])</span><br><span class="line">                &#123;</span><br><span class="line">                    d[i]=val;</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">                val^=d[i];</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> val&gt;<span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">query_max</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">long</span> <span class="keyword">long</span> ret=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">            <span class="keyword">if</span> ((ret^d[i])&gt;ret)</span><br><span class="line">                ret^=d[i];</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">query_min</span><span class="params">()</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">60</span>;i++)</span><br><span class="line">            <span class="keyword">if</span> (d[i])</span><br><span class="line">                <span class="keyword">return</span> d[i];</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">rebuild</span><span class="params">()</span><span class="comment">//利用了高斯消元</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j=i<span class="number">-1</span>;j&gt;=<span class="number">0</span>;j--)</span><br><span class="line">                <span class="keyword">if</span> (d[i]&amp;(<span class="number">1L</span>L&lt;&lt;j))</span><br><span class="line">                    d[i]^=d[j];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;=<span class="number">60</span>;i++)</span><br><span class="line">            <span class="keyword">if</span> (d[i])</span><br><span class="line">                p[cnt++]=d[i];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">kthquery</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> k)</span><span class="comment">//求最小值</span></span></span><br><span class="line"><span class="function">    </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ret=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span> (k&gt;=(<span class="number">1L</span>L&lt;&lt;cnt))</span><br><span class="line">            <span class="keyword">return</span> <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">            <span class="keyword">if</span> (k&amp;(<span class="number">1L</span>L&lt;&lt;i))</span><br><span class="line">                ret^=p[i];</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">L_B <span class="title">merge</span><span class="params">(<span class="keyword">const</span> L_B &amp;n1,<span class="keyword">const</span> L_B &amp;n2)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    L_B ret=n1;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">60</span>;i&gt;=<span class="number">0</span>;i--)</span><br><span class="line">        <span class="keyword">if</span> (n2.d[i])</span><br><span class="line">            ret.insert(n1.d[i]);</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/27/线性基/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/07/29/Find the answer/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          HDU 6609 Find the answer（2019HDU多校赛第三场1007）
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/07/25/20190725-New-Start/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">20190725 New Start</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -246,9 +397,9 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
