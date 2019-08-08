@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>ZZY&#39;s Blog</title>
+  <title>HihoCoder 1873 Frog and Portal（思维） | ZZY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="而我想我属于一个拥有你的未来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZZY&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="题目传送门 时间限制:1000ms       单点时限:1000ms      内存限制:512MB 描述A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (position 0) and wants to get to th">
+<meta name="keywords" content="ACM">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HihoCoder 1873 Frog and Portal（思维）">
+<meta property="og:url" content="http://yoursite.com/2019/08/02/HihoCoder 1873 Frog and Portal/index.html">
 <meta property="og:site_name" content="ZZY&#39;s Blog">
-<meta property="og:description" content="而我想我属于一个拥有你的未来">
+<meta property="og:description" content="题目传送门 时间限制:1000ms       单点时限:1000ms      内存限制:512MB 描述A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (position 0) and wants to get to th">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2019-08-08T04:39:58.648Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZZY&#39;s Blog">
-<meta name="twitter:description" content="而我想我属于一个拥有你的未来">
+<meta name="twitter:title" content="HihoCoder 1873 Frog and Portal（思维）">
+<meta name="twitter:description" content="题目传送门 时间限制:1000ms       单点时限:1000ms      内存限制:512MB 描述A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (position 0) and wants to get to th">
   
     <link rel="alternative" href="/atom.xml" title="ZZY&#39;s Blog" type="application/atom+xml">
   
@@ -153,16 +155,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-HihoCoder 1873 Frog and Portal" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-HihoCoder 1873 Frog and Portal" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/02/HihoCoder 1873 Frog and Portal/">HihoCoder 1873 Frog and Portal（思维）</a>
+    <h1 class="article-title" itemprop="name">
+      HihoCoder 1873 Frog and Portal（思维）
     </h1>
   
 
@@ -179,7 +179,35 @@
         <p><a href="https://hihocoder.com/problemset/problem/1873" target="_blank" rel="noopener">题目传送门</a></p>
 <p>时间限制:1000ms       单点时限:1000ms      内存限制:512MB</p>
 <h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>A small frog wants to get to the other side of a river. The frog is initially located at one bank of the river (position 0) and wants to get to the other bank (position 200). Luckily, there are 199 leaves (from position 1 to position 199) on the river, and the frog can jump between the leaves. When at position p, the frog can jump to position p+1 or position p+2.</p>
-        
+<a id="more"></a>
+<p>How many different ways can the small frog get to the bank at position 200? This is a classical problem. The solution is the 201st number of Fibonacci sequence. The Fibonacci sequence is constructed as follows: F<sub>1</sub>=F<sub>2</sub>=1;F<sub>n</sub>=F<sub>n-1</sub>+F<sub>n-2</sub>.</p>
+<p>Now you can build some portals on the leaves. For each leaf, you can choose whether to build a portal on it. And you should set a destination for each portal. When the frog gets to a leaf with a portal, it will be teleported to the corresponding destination immediately. If there is a portal at the destination, the frog will be teleported again immediately. If some portal destinations form a cycle, the frog will be permanently trapped inside. Note that You cannot build two portals on the same leaf.</p>
+<p>Can you build the portals such that the number of different ways that the small frog gets to position 200 from position 0 is M?</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>There are no more than 100 test cases.</p>
+<p>Each test case consists of an integer M, indicating the number of ways that the small frog gets to position 200 from position 0. (0 ≤ M &lt; 2^32)</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>For each test case:</p>
+<p>The first line contains a number K, indicating the number of portals.</p>
+<p>Then K lines follow. Each line has two numbers ai and bi, indicating that you place a portal at position ai and it teleports the frog to position bi.</p>
+<p>You should guarantee that 1 ≤ K, ai, bi ≤ 199, and ai ≠ aj if i ≠ j. If there are multiple solutions, any one of them is acceptable.</p>
+<h3 id="样例输入"><a href="#样例输入" class="headerlink" title="样例输入"></a>样例输入</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br><span class="line"><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="样例输出"><a href="#样例输出" class="headerlink" title="样例输出"></a>样例输出</h3><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">1</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">1</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">199</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">2</span></span><br><span class="line"><span class="number">2</span></span><br><span class="line"><span class="symbol">4 </span><span class="number">199</span></span><br><span class="line"><span class="symbol">5 </span><span class="number">5</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h3><p>题目大概的意思是说，有只青蛙要从第0个点到第200个点去，中途有1~199个点，其中它每次可以向前跳1步或者2步。而现在加一个条件，就是我们可以在一些地方放传送门，使得青蛙走到这个点的时候可以直接传送到目的点。题目询问从0到200有m种方案数的一种放置传送门的方法。</p>
+<p>很多人被上面的斐波那契数列给绕晕了，用斐波那契来写是可以写的，但是个人感觉特别麻烦，所以想到种简单的一种方法：</p>
+<p>首先，我们可以把问题理解成，我当前站在$pos$点，需要$m$种方案到达终点，这样我们可以分类讨论：</p>
+<ul>
+<li><p>如果$m$是偶数，那么我们该如何让方案数缩小一半呢？我们可以在$pos+1$的位置建立一个到$pos+3$的传送门，然后在$pos+2$的地方建立一个到$pos+1$的传送门，这样我们从$pos$到$pos+3$的方案数是2种，那么问题就被分解成：<strong>我现在站在$pos+3$点，需要$\frac{m}{2}$种方案到达终点</strong>；</p>
+</li>
+<li><p>如果$m$是奇数的话，我们要想让$m$变成可以用上面的东西进行分解的话，我们只需要在$pos+1$处放置一个到199号点的传送门，然后跳到$pos+2$号点上，这个问题就变成了：<strong>我现在站在$pos+2$点，需要$m-1$种方案到达终点</strong>。</p>
+</li>
+</ul>
+<p>然后问题就被分解成不断的小问题啦！</p>
+<p>最后，注意当$m=1$和$m=0$的时候特判一下就OK了！</p>
+<p>最最最最最最后，m要开$long long$！！！</p>
+<h3 id="Code："><a href="#Code：" class="headerlink" title="Code："></a>Code：</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">	<span class="keyword">int</span> x,y;</span><br><span class="line">&#125;a[<span class="number">500</span>];</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">long</span> <span class="keyword">long</span> m;</span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">cin</span>&gt;&gt;m)&#123;</span><br><span class="line">		<span class="keyword">int</span> cnt=<span class="number">0</span>,pos=<span class="number">0</span>;</span><br><span class="line">		<span class="keyword">if</span> (m==<span class="number">0</span>)&#123;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;<span class="string">"2\n"</span>&lt;&lt;<span class="string">"1 1\n"</span>&lt;&lt;<span class="string">"2 1\n"</span>;</span><br><span class="line">		&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">			<span class="keyword">while</span> (m!=<span class="number">0</span>)&#123;</span><br><span class="line">				<span class="keyword">if</span> (m==<span class="number">1</span>)&#123;</span><br><span class="line">					a[++cnt].x=pos+<span class="number">1</span>,a[cnt].y=<span class="number">199</span>;</span><br><span class="line">					a[++cnt].x=pos+<span class="number">2</span>,a[cnt].y=pos+<span class="number">2</span>;</span><br><span class="line">					m/=<span class="number">2</span>;</span><br><span class="line">					<span class="keyword">break</span>;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">if</span> (m%<span class="number">2</span>==<span class="number">0</span>)&#123;</span><br><span class="line">					a[++cnt].x=pos+<span class="number">1</span>,a[cnt].y=pos+<span class="number">3</span>;</span><br><span class="line">					a[++cnt].x=pos+<span class="number">2</span>,a[cnt].y=pos+<span class="number">1</span>;</span><br><span class="line">					pos=pos+<span class="number">3</span>;</span><br><span class="line">					m/=<span class="number">2</span>;</span><br><span class="line">				&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">					a[++cnt].x=pos+<span class="number">1</span>,a[cnt].y=<span class="number">199</span>;</span><br><span class="line">					pos=pos+<span class="number">2</span>;</span><br><span class="line">					m--;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="built_in">cout</span>&lt;&lt;cnt&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=cnt;i++)</span><br><span class="line">				<span class="built_in">cout</span>&lt;&lt;a[i].x&lt;&lt;<span class="string">" "</span>&lt;&lt;a[i].y&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
       
 
       
@@ -201,16 +229,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/02/HihoCoder 1873 Frog and Portal/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/02/HihoCoder 1873 Frog and Portal/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/02/K-th Closest Distance/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HDU 6621 K-th Closest Distance（2019HDU多校赛第4场）</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -225,387 +312,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-K-th Closest Distance" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/02/K-th Closest Distance/">HDU 6621 K-th Closest Distance（2019HDU多校赛第4场）</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/02/K-th Closest Distance/" class="archive-article-date">
-  	<time datetime="2019-08-02T02:38:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6621" target="_blank" rel="noopener">题目传送门</a></p>
-<p><strong>Time Limit: 20000/15000 MS (Java/Others)    Memory Limit: 524288/524288 K (Java/Others)</strong></p>
-<p><strong>Problem Description</strong></p>
-<p>You have an array: a1, a2, …, an and you must answer for some queries.<br>For each query, you are given an interval [L, R] and two numbers p and K. Your goal is to find the Kth closest distance between p and aL, aL+1, …, aR.<br>The distance between p and ai is equal to |p - ai|.<br>For example:<br>A = {31, 2, 5, 45, 4 } and L = 2, R = 5, p = 3, K = 2.<br>|p - a2| = 1, |p - a3| = 2, |p - a4| = 42, |p - a5| = 1.<br>Sorted distance is {1, 1, 2, 42}. Thus, the 2nd closest distance is 1.</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/02/K-th Closest Distance/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#描述"><span class="toc-number">1.</span> <span class="toc-text">描述</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输入"><span class="toc-number">2.</span> <span class="toc-text">输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#输出"><span class="toc-number">3.</span> <span class="toc-text">输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输入"><span class="toc-number">4.</span> <span class="toc-text">样例输入</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#样例输出"><span class="toc-number">5.</span> <span class="toc-text">样例输出</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#思路分析"><span class="toc-number">6.</span> <span class="toc-text">思路分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Code："><span class="toc-number">7.</span> <span class="toc-text">Code：</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-Find the answer" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/29/Find the answer/">HDU 6609 Find the answer（2019HDU多校赛第三场1007）</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/29/Find the answer/" class="archive-article-date">
-  	<time datetime="2019-07-29T13:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-29</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6609" target="_blank" rel="noopener">题目传送门</a></p>
-<p>Time Limit: 4000MS Memory Limit: 64MB</p>
-<h3 id="Description"><a href="#Description" class="headerlink" title="Description"></a>Description</h3><p>Given a sequence of n integers called W and an integer m. For each i (1 &lt;= i &lt;= n), you can choose some elements $W_k$ (1 &lt;= k &lt; i), and change them to zero to make $\sum_{j=1}^i$$W_j$&lt;=m. So what’s the minimum number of chosen elements to meet the requirements above?</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/29/Find the answer/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-线性基" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/27/线性基/">线性基</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/27/线性基/" class="archive-article-date">
-  	<time datetime="2019-07-27T09:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-27</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>鸣谢<a href="https://blog.csdn.net/qaq__qaq/article/details/53812883" target="_blank" rel="noopener">Yveh博主的博客</a>！</p>
-</blockquote>
-<h3 id="一、定义"><a href="#一、定义" class="headerlink" title="一、定义"></a>一、定义</h3><p>设数集T的值域范围为[1,2<sup>n</sup>-1] ,</p>
-<p>T的线性基是T的一个子集A={a<sub>1</sub>,a<sub>2</sub>,a<sub>3</sub>,…,a<sub>n</sub>}。 </p>
-<p>A中元素互相xor所形成的异或集合，等价于原数集T的元素互相xor形成的异或集合。 </p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/27/线性基/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-20190725-New-Start" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/25/20190725-New-Start/">20190725 New Start</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/25/20190725-New-Start/" class="archive-article-date">
-  	<time datetime="2019-07-25T05:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-25</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>坐标TJU，大二学生一枚，就读于计算机科学与技术专业，ACM训练ing……<br>最近集训过于频繁，于是在空闲时间简单搭了个博客，可能还有bug，日后会慢慢debug~</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/25/20190725-New-Start/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/24/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/24/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-24T14:25:31.031Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-24</time>
-</a>
-        
-      </header>
-    
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.<br>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/24/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -645,8 +377,8 @@ setInterval("createtime()",250);
     <script>
 	var yiliaConfig = {
 		mathjax: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
