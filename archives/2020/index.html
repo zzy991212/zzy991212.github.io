@@ -7,20 +7,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>HDU 6621 K-th Closest Distance（2019HDU多校赛第4场） | ZZY&#39;s Blog</title>
+  <title>Archives: 2020 | ZZY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目传送门 Time Limit: 20000/15000 MS (Java/Others)    Memory Limit: 524288/524288 K (Java/Others) Problem Description You have an array: a1, a2, …, an and you must answer for some queries.For each query,">
-<meta name="keywords" content="ACM">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HDU 6621 K-th Closest Distance（2019HDU多校赛第4场）">
-<meta property="og:url" content="http://yoursite.com/2019/08/02/K-th Closest Distance/index.html">
+  <meta name="description" content="而我想我属于一个拥有你的未来">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ZZY&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
 <meta property="og:site_name" content="ZZY&#39;s Blog">
-<meta property="og:description" content="题目传送门 Time Limit: 20000/15000 MS (Java/Others)    Memory Limit: 524288/524288 K (Java/Others) Problem Description You have an array: a1, a2, …, an and you must answer for some queries.For each query,">
+<meta property="og:description" content="而我想我属于一个拥有你的未来">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-02T12:54:58.652Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 6621 K-th Closest Distance（2019HDU多校赛第4场）">
-<meta name="twitter:description" content="题目传送门 Time Limit: 20000/15000 MS (Java/Others)    Memory Limit: 524288/524288 K (Java/Others) Problem Description You have an array: a1, a2, …, an and you must answer for some queries.For each query,">
+<meta name="twitter:title" content="ZZY&#39;s Blog">
+<meta name="twitter:description" content="而我想我属于一个拥有你的未来">
   
     <link rel="alternative" href="/atom.xml" title="ZZY&#39;s Blog" type="application/atom+xml">
   
@@ -159,192 +157,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-K-th Closest Distance" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      HDU 6621 K-th Closest Distance（2019HDU多校赛第4场）
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/04/19/test/" class="archive-article-date">
+  	<time datetime="2020-04-19T03:19:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/04/19/test/">test</a>
     </h1>
   
 
-        
-        <a href="/2019/08/02/K-th Closest Distance/" class="archive-article-date">
-  	<time datetime="2019-08-02T02:38:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        
-      </header>
-    
+        <div class="article-info info-on-right">
+          
+          
 
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6621" target="_blank" rel="noopener">题目传送门</a></p>
-<p><strong>Time Limit: 20000/15000 MS (Java/Others)    Memory Limit: 524288/524288 K (Java/Others)</strong></p>
-<p><strong>Problem Description</strong></p>
-<p>You have an array: a1, a2, …, an and you must answer for some queries.<br>For each query, you are given an interval [L, R] and two numbers p and K. Your goal is to find the Kth closest distance between p and aL, aL+1, …, aR.<br>The distance between p and ai is equal to |p - ai|.<br>For example:<br>A = {31, 2, 5, 45, 4 } and L = 2, R = 5, p = 3, K = 2.<br>|p - a2| = 1, |p - a3| = 2, |p - a4| = 42, |p - a5| = 1.<br>Sorted distance is {1, 1, 2, 42}. Thus, the 2nd closest distance is 1.</p>
- <a id="more"></a>
-
-<p><strong>Input</strong></p>
-<p>The first line of the input contains an integer T (1 &lt;= T &lt;= 3) denoting the number of test cases.<br>For each test case:<br>The first line contains two integers n and m (1 &lt;= n, m &lt;= 10^5) denoting the size of array and number of queries.<br>The second line contains n space-separated integers a1, a2, …, an (1 &lt;= ai &lt;= 10^6). Each value of array is unique.<br>Each of the next m lines contains four integers L’, R’, p’ and K’.<br>From these 4 numbers, you must get a real query L, R, p, K like this:<br>L = L’ xor X, R = R’ xor X, p = p’ xor X, K = K’ xor X, where X is just previous answer and at the beginning, X = 0.<br>(1 &lt;= L &lt; R &lt;= n, 1 &lt;= p &lt;= 10^6, 1 &lt;= K &lt;= 169, R - L + 1 &gt;= K).</p>
-<p><strong>Output</strong></p>
-<p>For each query print a single line containing the Kth closest distance between p and aL, aL+1, …, aR.</p>
-<p><strong>Sample Input</strong></p>
-<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="symbol">5 </span><span class="number">2</span></span><br><span class="line"><span class="symbol">31 </span><span class="number">2</span> <span class="number">5</span> <span class="number">45</span> <span class="number">4</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">5</span> <span class="number">5</span> <span class="number">1</span></span><br><span class="line"><span class="symbol">2 </span><span class="number">5</span> <span class="number">3</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-
-
-
-<p><strong>Sample Output</strong></p>
-<figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="思路分析"><a href="#思路分析" class="headerlink" title="思路分析"></a>思路分析</h2><p>题目意思是说，给定一段序列，每次求区间[L,R]的数与P的差的绝对值，对其排序后的第K个差值是多少。（后面的L,R,P,K要用之前的答案异或得到，所以一旦前面错了，后面就Game Over了，甚至会RE<em>【别问我为什么quq】</em>）</p>
-<p>首先考虑到时间限制，虽然给了15s看上去绰绰有余，实际上偌大的数据量还是不能暴力去算，所以就想到了线段树这个万能的东西！它可以把查询压缩到O(logn)，但这样复杂度还是有点高，所以再考虑二分一下以p为中心的半径，即每次验证[p-mid,p+mid]区间内的数的个数是不是符合要求，这样总体的复杂度就是O(mloglogn)，是不是感觉很赞呢~</p>
-<p>用主席树（一说叫权值线段树）查询十分方便，我们只需要以数据初始的id为基建树，然后再一阵基本操作就行！</p>
-<p>反正具体的看代码就行！</p>
-<h2 id="Code"><a href="#Code" class="headerlink" title="Code"></a>Code</h2><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> maxn=<span class="number">2</span>*<span class="number">1e5</span>+<span class="number">100</span>; </span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">int</span> n,m,cnt=<span class="number">0</span>,xk,tt,xl,xr,xp;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span> a[maxn],root[maxn],id[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> l,r,sum;</span><br><span class="line">&#125;T[maxn*<span class="number">40</span>];</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">update</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> &amp;x,<span class="keyword">int</span> y,<span class="keyword">int</span> pos)</span></span>&#123;</span><br><span class="line">    T[++cnt]=T[y];T[cnt].sum++;x=cnt;</span><br><span class="line">    <span class="keyword">if</span> (l==r) <span class="keyword">return</span> ;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (pos&lt;=mid) update(l,mid,T[x].l,T[y].l,pos);    </span><br><span class="line">    <span class="keyword">else</span> update(mid+<span class="number">1</span>,r,T[x].r,T[y].r,pos);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">ask</span><span class="params">(<span class="keyword">int</span> l,<span class="keyword">int</span> r,<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (tt&gt;=xk) <span class="keyword">return</span>;</span><br><span class="line">    <span class="keyword">if</span> (xl&lt;=l&amp;&amp;r&lt;=xr)&#123;</span><br><span class="line">        tt+=T[y].sum-T[x].sum;</span><br><span class="line">        <span class="keyword">return</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> mid=(l+r)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span> (xl&lt;=mid) ask(l,mid,T[x].l,T[y].l);</span><br><span class="line">    <span class="keyword">if</span> (mid&lt;xr) ask(mid+<span class="number">1</span>,r,T[x].r,T[y].r);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">cmp</span><span class="params">(<span class="keyword">int</span> x,<span class="keyword">int</span> y)</span></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a[x]&lt;a[y];</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    ios::sync_with_stdio(<span class="literal">false</span>);</span><br><span class="line">    <span class="built_in">cin</span>.tie(<span class="number">0</span>);</span><br><span class="line">    <span class="keyword">int</span> test;</span><br><span class="line">    <span class="built_in">cin</span>&gt;&gt;test;</span><br><span class="line">	<span class="keyword">while</span> (test--)&#123;</span><br><span class="line">    	<span class="built_in">memset</span>(root,<span class="number">0</span>,<span class="keyword">sizeof</span> root);</span><br><span class="line">    	<span class="built_in">memset</span>(T,<span class="number">0</span>,<span class="keyword">sizeof</span> T);</span><br><span class="line">    	<span class="built_in">memset</span>(a,<span class="number">0</span>,<span class="keyword">sizeof</span> a);</span><br><span class="line">    	<span class="built_in">memset</span>(id,<span class="number">0</span>,<span class="keyword">sizeof</span> id);</span><br><span class="line">    	cnt=<span class="number">0</span>;</span><br><span class="line">    	<span class="built_in">cin</span>&gt;&gt;n&gt;&gt;m;</span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++) &#123;</span><br><span class="line">            <span class="built_in">cin</span>&gt;&gt;a[i];</span><br><span class="line">            id[i]=i;</span><br><span class="line">   		&#125;</span><br><span class="line">    	sort(id+<span class="number">1</span>,id+<span class="number">1</span>+n,cmp);</span><br><span class="line">    	sort(a+<span class="number">1</span>,a+<span class="number">1</span>+n);</span><br><span class="line">    </span><br><span class="line">    	<span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;i++)</span><br><span class="line">            update(<span class="number">1</span>,n,root[i],root[i<span class="number">-1</span>],id[i]);</span><br><span class="line">    	<span class="keyword">int</span> ans=<span class="number">0</span>;</span><br><span class="line">    	<span class="keyword">while</span> (m--)&#123;</span><br><span class="line">        	<span class="built_in">cin</span>&gt;&gt;xl&gt;&gt;xr&gt;&gt;xp&gt;&gt;xk;</span><br><span class="line">        	xl^=ans,xr^=ans,xp^=ans,xk^=ans;</span><br><span class="line">        	<span class="keyword">int</span> ll=<span class="number">-1</span>,rr=<span class="number">1e7</span>;</span><br><span class="line">        	<span class="keyword">while</span>(rr-ll&gt;<span class="number">1</span>)&#123;</span><br><span class="line">            	<span class="keyword">int</span> mid=(ll+rr)&gt;&gt;<span class="number">1</span>;</span><br><span class="line">            	<span class="keyword">int</span> ls=lower_bound(a+<span class="number">1</span>,a+n+<span class="number">1</span>,xp-mid)-a;</span><br><span class="line">            	<span class="keyword">int</span> rs=upper_bound(a+<span class="number">1</span>,a+n+<span class="number">1</span>,xp+mid)-a<span class="number">-1</span>;</span><br><span class="line">            	tt=<span class="number">0</span>;</span><br><span class="line">            	ask(<span class="number">1</span>,n,root[ls<span class="number">-1</span>],root[rs]);</span><br><span class="line">            	<span class="keyword">if</span> (tt&gt;=xk) rr=mid;<span class="keyword">else</span> ll=mid;</span><br><span class="line">        	&#125;</span><br><span class="line">        	ans=rr;</span><br><span class="line">        	<span class="built_in">cout</span>&lt;&lt;ans&lt;&lt;<span class="built_in">endl</span>; </span><br><span class="line">    	&#125;</span><br><span class="line">	&#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/02/K-th Closest Distance/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/08/02/HihoCoder 1873 Frog and Portal/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          HihoCoder 1873 Frog and Portal（思维）
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/07/29/Find the answer/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">HDU 6609 Find the answer（2019HDU多校赛第三场1007）</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#思路分析"><span class="toc-number">1.</span> <span class="toc-text">思路分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Code"><span class="toc-number">2.</span> <span class="toc-text">Code</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -387,8 +242,8 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
