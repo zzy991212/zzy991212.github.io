@@ -7,18 +7,25 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: ACM | ZZY&#39;s Blog</title>
+  <title>简易微信 | ZZY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="而我想我属于一个拥有你的未来">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZZY&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/tags/ACM/index.html">
+  <meta name="description" content="大二上学期的计算机网络课，与YuanSnowing组成小组选择了“简易微信”作为一个大作业，前前后后大概写了两周左右，终于完工。疫情在家闲来无事把大致内容写到博客中，算是一个记录。 另外，本项目已经上传至Github：https://github.com/zzy991212/Wechat">
+<meta name="keywords" content="Socket Programming,Python,Computer NetWork">
+<meta property="og:type" content="article">
+<meta property="og:title" content="简易微信">
+<meta property="og:url" content="http://yoursite.com/2020/04/19/简易微信/index.html">
 <meta property="og:site_name" content="ZZY&#39;s Blog">
-<meta property="og:description" content="而我想我属于一个拥有你的未来">
+<meta property="og:description" content="大二上学期的计算机网络课，与YuanSnowing组成小组选择了“简易微信”作为一个大作业，前前后后大概写了两周左右，终于完工。疫情在家闲来无事把大致内容写到博客中，算是一个记录。 另外，本项目已经上传至Github：https://github.com/zzy991212/Wechat">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/简易微信/Wechat.png">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/简易微信/Login.gif">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/简易微信/Friend.gif">
+<meta property="og:image" content="http://yoursite.com/2020/04/19/简易微信/Chat.png">
+<meta property="og:updated_time" content="2020-04-19T12:38:27.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ZZY&#39;s Blog">
-<meta name="twitter:description" content="而我想我属于一个拥有你的未来">
+<meta name="twitter:title" content="简易微信">
+<meta name="twitter:description" content="大二上学期的计算机网络课，与YuanSnowing组成小组选择了“简易微信”作为一个大作业，前前后后大概写了两周左右，终于完工。疫情在家闲来无事把大致内容写到博客中，算是一个记录。 另外，本项目已经上传至Github：https://github.com/zzy991212/Wechat">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/19/简易微信/Wechat.png">
   
     <link rel="alternative" href="/atom.xml" title="ZZY&#39;s Blog" type="application/atom+xml">
   
@@ -157,250 +164,229 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-简易微信" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      简易微信
+    </h1>
+  
+
+        
+        <a href="/2020/04/19/简易微信/" class="archive-article-date">
+  	<time datetime="2020-04-19T12:19:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-19</time>
+</a>
+        
+      </header>
     
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>大二上学期的计算机网络课，与YuanSnowing组成小组选择了“简易微信”作为一个大作业，前前后后大概写了两周左右，终于完工。疫情在家闲来无事把大致内容写到博客中，算是一个记录。</p>
+<p>另外，本项目已经上传至Github：<a href="https://github.com/zzy991212/Wechat" target="_blank" rel="noopener">https://github.com/zzy991212/Wechat</a></p>
+<a id="more"></a>
+
+<p><img src="Wechat.png" alt></p>
+<h2 id="一、-总体设计"><a href="#一、-总体设计" class="headerlink" title="一、 总体设计"></a><strong>一、</strong> <strong>总体设计</strong></h2><h3 id="1-1-客户端设计"><a href="#1-1-客户端设计" class="headerlink" title="1.1  客户端设计"></a><strong>1.1</strong>  <strong>客户端设计</strong></h3><p>本系统客户端主要分为四个界面：登陆界面、好友列表、消息界面、聊天窗口。</p>
+<p>（1）打开简易微信后，会自动打开登陆界面。在登录界面登陆或成功注册后，会进入好友列表界面。</p>
+<p>（2）好友列表界面每两秒自动刷新一次，更新未读消息和好友列表。在文本框中输入用户名后，可以选择删除好友、添加好友和与好友聊天。也可以在该界面点击消息列表按钮进入消息列表、点击注销按钮注销。</p>
+<p>（3）在进入消息列表后，用户可以看到自己的新消息。包括新信息、被同意的好友申请、被拒绝的好友申请以及待处理的好友申请。前三者在消息列表中显示一次，第二次就不会再显示。而待处理的好友申请则会在处理后消失。在消息列表界面，用户可以选择接收好友申请或拒绝好友申请，或者回复新消息。</p>
+<p>（4）在聊天窗口，用户可以实时与好友互发消息、图片和文件。图片会显示在聊天框内，而文件则会把路径显示在聊天框内。用户可以自行设置文件保存路径，初始路径为.py文件的同一级目录下。</p>
+<p><strong>1.2</strong>  <strong>服务器设计</strong></p>
+<p>本系统服务器主要采用“多线程+TCP协议主程序”的方式实现，每个操作再具体细分成小块。另外，用户账号密码数据库、好友列表数据库采用的原始的excel表格模拟SQL。</p>
+<p>（1）多线程主要实现多用户同时在线、聊天，以及实现刷新消息，实时接收消息的功能；</p>
+<p>（2）利用TCP协议实现服务器与客户端的通信，保持TCP连接可以节约每次断开后再握手的时间消耗，并且可以方便记录在线状态与当前用户的ID，免去了记录IP的麻烦；</p>
+<p>（3）新消息存在一个全局变量的列表中（消息池），每次刷新操作再将其按格式分配给不同的用户，保证消息经过了服务器再传送给接收方；</p>
+<p>（4）服务器接收用户传送的文件并储存在.py的目录下的tmpfiles目录，再将文件名等信息存放在消息池，转发后删除tmpfiles目录下的该文件，保证了文件传输的安全性；</p>
+<p>（5）利用python关于excel表格的库实现数据库的管理，模拟SQL的操作，并将相应操作单独写在一个.py文件中，方便服务器调用。</p>
+<h2 id="二、-协议设计和系统设计"><a href="#二、-协议设计和系统设计" class="headerlink" title="二、 协议设计和系统设计"></a><strong>二、</strong> <strong>协议设计和系统设计</strong></h2><h3 id="2-1-协议设计"><a href="#2-1-协议设计" class="headerlink" title="2.1   协议设计"></a><strong>2.1</strong>   <strong>协议设计</strong></h3><h4 id="2-1-1-主命令设计"><a href="#2-1-1-主命令设计" class="headerlink" title="2.1.1 主命令设计"></a><strong>2.1.1</strong> <strong>主命令设计</strong></h4><p>我们的系统属于，客户端执行某个动作，会先向服务器端发送一条主命令，服务器识别并进入相应的部分，再进行接下的任务。</p>
+<p>（1）登录：logRequest = 100；</p>
+<p>（2）注册：regRequest = 101；</p>
+<p>（3）请求获得好友列表：friRequest = 102；</p>
+<p>（4）将用户发送的信息存在消息池中：chatBegin = 104；</p>
+<p>（5）询问消息池是否有关于某用户的新信息，如果有就按时间顺序发送给客户：isMes = 850；</p>
+<p>（6）添加好友：addFri = 800；</p>
+<p>（7）删除好友：delFri = 801；</p>
+<p>（8）同意对方添加自己好友的申请：aggFri = 810；</p>
+<p>（9）拒绝对方添加自己为好友的申请：disFri = 811；</p>
+<p>（10）在开始聊天前，询问对方是否为在线状态：chatFri = 888；</p>
+<p>（11）注销：发送空字符串””，判断后直接跳出While True循环，然后执行注销操作；</p>
+<p>（12）新信息数目：newsNum = 802；</p>
+<p>（13）好友申请成功数目：friOk = 803；</p>
+<p>（14）好友申请失败数目：friFall = 804；</p>
+<p>（15）收到的好友申请数目friReq = 805；</p>
+<p>（16）传输文件：fileSend = 1000；</p>
+<p>（17）传输图片：picSend = 1001。</p>
+<h4 id="2-1-2-其他命令设计"><a href="#2-1-2-其他命令设计" class="headerlink" title="2.1.2 其他命令设计"></a><strong>2.1.2</strong> <strong>其他命令设计</strong></h4><p>其他指令用来返回操作的合法与否，或者是用来存储信息内容等。</p>
+<p>（1）登陆：密码错误：fallOfWP = 602；</p>
+<p>（2）登陆：该用户未注册：fallOfNo = 601；</p>
+<p>（3）注册：用户名或密码非法：fallOfI = 610；</p>
+<p>（4）注册：用户名已经被占用：fallOfA = 611；</p>
+<p>（5）添加好友：用户已经在好友列表中：insheet = 901；</p>
+<p>（6）该用户名不存在：notinsheet = 903；</p>
+<p>（7）聊天：该用户不在好友列表里：notinsheet = 903；</p>
+<p>（8）聊天：该用户不在线：friNotOnline = 103；</p>
+<p>（9）请求成功或操作无误：ok = 666</p>
+<p>（10）存储申请好友消息：”To XXX,From XXX,FriendReq”；</p>
+<p>（11）存储拒绝申请好友消息：”To XXX,From XXX,DisagreeFriReq”；</p>
+<p>（12）存储同意申请好友消息：”To XXX,From XXX,AgreeFriReq”；</p>
+<p>（13）存储发送的文字信息：</p>
+<p>“To XXX,From XXX,time:XXXX-XX-XX XX:XX:XX,New Mess,XXXXXX”；</p>
+<p>（14）存储发送文件的信息：</p>
+<p>“To XXX,From XXX,time:XXXX-XX-XX XX:XX:XX,New File,XXX.XXX”；</p>
+<p>（15）存储发送图片的信息：</p>
+<p>“To XXX,From XXX,time:XXXX-XX-XX XX:XX:XX,New Pict,XXX.XXX”；</p>
+<p>（16）发送其他int，string等内容，代表数量、ID、密码等含义，在此不赘述。</p>
+<h3 id="2-2-系统设计"><a href="#2-2-系统设计" class="headerlink" title="2.2   系统设计"></a><strong>2.2</strong>   <strong>系统设计</strong></h3><p>（1） 登陆界面：</p>
+<p><img src="Login.gif" alt></p>
+<p>（2） 好友界面：</p>
+<p><img src="Friend.gif" alt></p>
+<p>（3）聊天界面：</p>
+<p><img src="Chat.png" alt></p>
+<h2 id="三、-协议和系统的实现"><a href="#三、-协议和系统的实现" class="headerlink" title="三、 协议和系统的实现"></a><strong>三、</strong> <strong>协议和系统的实现</strong></h2><p>此部分内容繁杂，暂时省略，具体代码请在Github上查看。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/13/HDU 6656 Kejin Player(期望)/" class="archive-article-date">
-  	<time datetime="2019-08-13T12:06:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/13/HDU 6656 Kejin Player(期望)/">HDU 6656 Kejin Player(期望)</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Socket Programming</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/09/玄学卡常技巧总结/" class="archive-article-date">
-  	<time datetime="2019-08-09T11:48:30.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-09</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/09/玄学卡常技巧总结/">玄学卡常技巧总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Python</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/HihoCoder 1873 Frog and Portal/" class="archive-article-date">
-  	<time datetime="2019-08-02T12:46:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/HihoCoder 1873 Frog and Portal/">HihoCoder 1873 Frog and Portal（思维）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
+      		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Computer NetWork</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/04/19/简易微信/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/08/02/K-th Closest Distance/" class="archive-article-date">
-  	<time datetime="2019-08-02T02:38:20.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/08/13/HDU 6656 Kejin Player(期望)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HDU 6656 Kejin Player(期望)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/08/02/K-th Closest Distance/">HDU 6621 K-th Closest Distance（2019HDU多校赛第4场）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-总体设计"><span class="toc-number">1.</span> <span class="toc-text">一、 总体设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-客户端设计"><span class="toc-number">1.1.</span> <span class="toc-text">1.1  客户端设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、-协议设计和系统设计"><span class="toc-number">2.</span> <span class="toc-text">二、 协议设计和系统设计</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-协议设计"><span class="toc-number">2.1.</span> <span class="toc-text">2.1   协议设计</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-1-主命令设计"><span class="toc-number">2.1.1.</span> <span class="toc-text">2.1.1 主命令设计</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-2-其他命令设计"><span class="toc-number">2.1.2.</span> <span class="toc-text">2.1.2 其他命令设计</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-系统设计"><span class="toc-number">2.2.</span> <span class="toc-text">2.2   系统设计</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、-协议和系统的实现"><span class="toc-number">3.</span> <span class="toc-text">三、 协议和系统的实现</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/29/Find the answer/" class="archive-article-date">
-  	<time datetime="2019-07-29T13:04:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-29</time>
-</a>
-        </div>
-    	 
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/29/Find the answer/">HDU 6609 Find the answer（2019HDU多校赛第三场1007）</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/07/27/线性基/" class="archive-article-date">
-  	<time datetime="2019-07-27T09:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/07/27/线性基/">线性基</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -443,9 +429,9 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
