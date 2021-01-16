@@ -7,20 +7,18 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>HDU 6656 Kejin Player(期望) | ZZY&#39;s Blog</title>
+  <title>Archives: 2021 | ZZY&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="题目传送门 Problem DescriptionCuber QQ always envies those Kejin players, who pay a lot of RMB to get a higher level in the game. So he worked so hard that you are now the game designer of this game. He de">
-<meta name="keywords" content="ACM">
-<meta property="og:type" content="article">
-<meta property="og:title" content="HDU 6656 Kejin Player(期望)">
-<meta property="og:url" content="http://yoursite.com/2019/08/13/HDU 6656 Kejin Player(期望)/index.html">
+  <meta name="description" content="而我想我属于一个拥有你的未来">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ZZY&#39;s Blog">
+<meta property="og:url" content="http://yoursite.com/archives/2021/index.html">
 <meta property="og:site_name" content="ZZY&#39;s Blog">
-<meta property="og:description" content="题目传送门 Problem DescriptionCuber QQ always envies those Kejin players, who pay a lot of RMB to get a higher level in the game. So he worked so hard that you are now the game designer of this game. He de">
+<meta property="og:description" content="而我想我属于一个拥有你的未来">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-13T12:16:04.539Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HDU 6656 Kejin Player(期望)">
-<meta name="twitter:description" content="题目传送门 Problem DescriptionCuber QQ always envies those Kejin players, who pay a lot of RMB to get a higher level in the game. So he worked so hard that you are now the game designer of this game. He de">
+<meta name="twitter:title" content="ZZY&#39;s Blog">
+<meta name="twitter:description" content="而我想我属于一个拥有你的未来">
   
     <link rel="alternative" href="/atom.xml" title="ZZY&#39;s Blog" type="application/atom+xml">
   
@@ -159,210 +157,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-HDU 6656 Kejin Player(期望)" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      HDU 6656 Kejin Player(期望)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/01/16/PA3实验思路/" class="archive-article-date">
+  	<time datetime="2021-01-16T04:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-16</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/01/16/PA3实验思路/">PA3实验思路[1.16更新]</a>
     </h1>
   
 
-        
-        <a href="/2019/08/13/HDU 6656 Kejin Player(期望)/" class="archive-article-date">
-  	<time datetime="2019-08-13T12:06:48.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-13</time>
-</a>
-        
-      </header>
-    
-	<!-- 添加代码 -->
-	
-		<span class="archive-article-date">
-			阅读量 <span id="busuanzi_value_page_pv"></span>
-		</span>
-	
-      </header>
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="http://acm.hdu.edu.cn/showproblem.php?pid=6656" target="_blank" rel="noopener">题目传送门</a></p>
-<h3 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h3><p>Cuber QQ always envies those Kejin players, who pay a lot of RMB to get a higher level in the game. So he worked so hard that you are now the game designer of this game. He decided to annoy these Kejin players a little bit, and give them the lesson that RMB does not always work.</p>
-<p>This game follows a traditional Kejin rule of “when you are level i, you have to pay ai RMB to get to level i+1”. Cuber QQ now changed it a little bit: “when you are level i, you pay ai RMB, are you get to level i+1 with probability pi; otherwise you will turn into level xi (xi≤i)”.</p>
-<p>Cuber QQ still needs to know how much money expected the Kejin players needs to “ke’’ so that they can upgrade from level l to level r, because you worry if this is too high, these players might just quit and never return again.</p>
-<a id="more"></a>
-
-<h3 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h3><p>The first line of the input is an integer t, denoting the number of test cases.</p>
-<p>For each test case, there is two space-separated integers n (1≤n≤500 000) and q (1≤q≤500 000) in the first line, meaning the total number of levels and the number of queries.</p>
-<p>Then follows n lines, each containing integers ri, si, xi, ai (1≤ri≤si≤10^9, 1≤xi≤i, 0≤ai≤10^9), space separated. Note that pi is given in the form of a fraction $\frac{ri}{si}$.</p>
-<p>The next q lines are q queries. Each of these queries are two space-separated integers l and r (1≤l&lt;r≤n+1).</p>
-<p>The sum of n and sum of q from all t test cases both does not exceed 10<sup>6</sup>.</p>
-<h3 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h3><p>For each query, output answer in the fraction form modulo 1e9+7, that is, if the answer is $\frac{P}{Q}$, you should output P⋅Q<sup>−1</sup> modulo 1e9+7, where Q<sup>−1</sup> denotes the multiplicative inverse of Q modulo 1e9+7.</p>
-<h3 id="Sample-Input"><a href="#Sample-Input" class="headerlink" title="Sample Input"></a>Sample Input</h3><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">1</span> <span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span> <span class="number">1</span> <span class="number">3</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">3</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">4</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">4</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Sample-Output"><a href="#Sample-Output" class="headerlink" title="Sample Output"></a>Sample Output</h3><figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">22</span></span><br><span class="line"><span class="number">12</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="Hint"><a href="#Hint" class="headerlink" title="Hint"></a>Hint</h3><p>Huge IO (Over 40MB)! IO optimization is preferred.</p>
-<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><p>我们先定义几个量：$r,s,x,m$，分别代表升级概率的分子、分母，退级到第$x$个，每次需要的钱数$m$。然后我们再定义$f[i]$表示从第$i$级升到第$i+1$级的期望，$sum[i]$表示从第$1$级升到第$i+1$级的期望。</p>
-<p>如果我们要算出来从第$i$级升到第$i+1$级的期望$f(x)$，不妨列一个中学数学学过的期望表格：</p>
-<table>
-<thead>
-<tr>
-<th align="center">$m$</th>
-<th align="center">$m+从x到i的期望+f[i]$</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">$\frac{r}{s}$</td>
-<td align="center">$1-\frac{r}{s}$</td>
-</tr>
-</tbody></table>
-<p>从$x$到$i$的期望，我们可以用$sum[i-1]-sum[x-1]$表示，</p>
-<p>所以嘛，我们可以得出以下方程式：<br>$$<br>f[i]=m\times \frac{r}{s}+(m+sum[i-1]-sum[x-1]+f[i])\times (1-\frac{r}{s})<br>$$<br>然后移项化简，得：<br>$$<br>f[i]=\frac{s\times m+(s-r)(sum[i-1]-sum[x-1])}{r}<br>$$<br>这样我们就可以算出来$sum$数组了，然后每次询问$x$到$y$的期望，答案就是：$sum[y-1]-sum[x-1]$</p>
-<h3 id="程序如下"><a href="#程序如下" class="headerlink" title="程序如下"></a>程序如下</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">long</span> <span class="keyword">long</span> LL;</span><br><span class="line"><span class="keyword">const</span> LL maxn = <span class="number">5</span>*<span class="number">1e5</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">long</span> <span class="keyword">long</span> MOD = <span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> n,q;</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">nodes</span>&#123;</span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> r,s,x,mon;</span><br><span class="line">&#125;val[maxn];</span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span>&#123;</span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> x,y;<span class="comment">// 表示 x/y</span></span><br><span class="line">&#125;f;</span><br><span class="line"><span class="keyword">long</span> <span class="keyword">long</span> sum[maxn];</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="title">read</span><span class="params">()</span></span>&#123;<span class="comment">//读入优化</span></span><br><span class="line">    LL x=<span class="number">0</span>,f=<span class="number">1</span>; <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span> (ch&lt;<span class="string">'0'</span> || ch&gt;<span class="string">'9'</span>) &#123;<span class="keyword">if</span> (ch==<span class="string">'-'</span>) f=<span class="number">-1</span>; ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span> (ch&gt;=<span class="string">'0'</span> &amp;&amp; ch&lt;=<span class="string">'9'</span>) &#123;x=x*<span class="number">10</span>+ch-<span class="string">'0'</span>; ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">return</span> x*f;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">long</span> <span class="keyword">long</span> <span class="title">exgcd</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a,<span class="keyword">long</span> <span class="keyword">long</span> b,<span class="keyword">long</span> <span class="keyword">long</span> &amp;x,<span class="keyword">long</span> <span class="keyword">long</span> &amp;y)</span></span>&#123;<span class="comment">//拓展欧几里得 </span></span><br><span class="line">    <span class="keyword">if</span>(b==<span class="number">0</span>)&#123;</span><br><span class="line">        x=<span class="number">1</span>,y=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> ret=exgcd(b,a%b,y,x);</span><br><span class="line">    y-=a/b*x;</span><br><span class="line">    <span class="keyword">return</span> ret;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">long</span> <span class="keyword">long</span> <span class="title">getInv</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> a,<span class="keyword">long</span> <span class="keyword">long</span> mod)</span></span>&#123;<span class="comment">//求a在mod下的逆元，不存在逆元返回-1 </span></span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> x,y;</span><br><span class="line">    <span class="keyword">long</span> <span class="keyword">long</span> d=exgcd(a,mod,x,y);</span><br><span class="line">    <span class="keyword">return</span> d==<span class="number">1</span>?(x%mod+mod)%mod:<span class="number">-1</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">outs</span><span class="params">(<span class="keyword">long</span> <span class="keyword">long</span> x)</span></span>&#123;<span class="comment">//输出优化</span></span><br><span class="line">    <span class="keyword">if</span>(x&gt;=<span class="number">10</span>)&#123;</span><br><span class="line">        outs(x/<span class="number">10</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">putchar</span>(x%<span class="number">10</span>+<span class="string">'0'</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T;</span><br><span class="line">    T=read();</span><br><span class="line">    <span class="keyword">while</span> (T--)&#123;</span><br><span class="line">        n=read(),q=read();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">1</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            val[i].r=read(),val[i].s=read(),val[i].x=read(),val[i].mon=read();    </span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        f.x=(val[<span class="number">1</span>].mon%MOD*val[<span class="number">1</span>].s)%MOD;f.y=val[<span class="number">1</span>].r;    </span><br><span class="line">        sum[<span class="number">0</span>]=<span class="number">0</span>;</span><br><span class="line">        sum[<span class="number">1</span>]=(f.x*getInv(f.y,MOD))%MOD;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">register</span> <span class="keyword">int</span> i=<span class="number">2</span>;i&lt;=n;++i)&#123;</span><br><span class="line">            f.x=((val[i].mon%MOD*val[i].s)%MOD+((val[i].s-val[i].r)%MOD*((sum[i<span class="number">-1</span>]-sum[val[i].x<span class="number">-1</span>]+MOD)%MOD)%MOD)%MOD)%MOD;<span class="comment">//因为这一块的少MOD了导致WA了好几次，于是这一块有点丧心病狂</span></span><br><span class="line">            f.y=val[i].r;</span><br><span class="line">            sum[i]=(sum[i<span class="number">-1</span>]+f.x*getInv(f.y,MOD))%MOD;<span class="comment">//前缀和</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (q--)&#123;</span><br><span class="line">            <span class="keyword">int</span> xx,yy;</span><br><span class="line">            xx=read(),yy=read();</span><br><span class="line">            <span class="keyword">long</span> <span class="keyword">long</span> ss=(sum[yy<span class="number">-1</span>]-sum[xx<span class="number">-1</span>]+MOD)%MOD;</span><br><span class="line">            outs(ss);</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">""</span>);</span><br><span class="line">        &#125;            </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">NEMU</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/13/HDU 6656 Kejin Player(期望)/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2020/04/19/简易微信/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          简易微信
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/08/09/玄学卡常技巧总结/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">玄学卡常技巧总结</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Problem-Description"><span class="toc-number">1.</span> <span class="toc-text">Problem Description</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Input"><span class="toc-number">2.</span> <span class="toc-text">Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Output"><span class="toc-number">3.</span> <span class="toc-text">Output</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sample-Input"><span class="toc-number">4.</span> <span class="toc-text">Sample Input</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Sample-Output"><span class="toc-number">5.</span> <span class="toc-text">Sample Output</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Hint"><span class="toc-number">6.</span> <span class="toc-text">Hint</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解题思路："><span class="toc-number">7.</span> <span class="toc-text">解题思路：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#程序如下"><span class="toc-number">8.</span> <span class="toc-text">程序如下</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -409,8 +257,8 @@ setInterval("createtime()",250);
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: true,
